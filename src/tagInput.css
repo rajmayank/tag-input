@@ -30,7 +30,12 @@
 }
 .tagInput-container .tagInput-input{
 	width: 100%;
+}
+.tagInput-container .tagInput-input,
+.tagInput-container .tagInput-input:focus,
+.tagInput-container .tagInput-input:active {
 	border: none !important;
+	outline: none !important;
 }
 .tagInput-container .tagInput-input{
 	width: 100%;
