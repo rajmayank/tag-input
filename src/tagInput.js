@@ -63,12 +63,6 @@
 				return true;
 			}
 			
-			addTag('mayank9856@gmail.com');
-			addTag('mayank9856@gmail.com');
-			addTag('mayank9856@gmail.com');
-			addTag('mayank9856@gmail.com');
-			addTag('mayank9856@gmail.com');
-
 			function setInputWidth() {
 				if ($(inputElementContainer).parent().find('.tagInput-tag:last').length > 0) {
 					var right_limit = $(containerDiv).offset().left + $(containerDiv).width();
