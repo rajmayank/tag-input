@@ -1,0 +1,20 @@
+{
+  "name": "tagInput",
+  "homepage": "https://github.com/rajmayank/tag-input",
+  "authors": [
+    "Mayank <mayank9856@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
