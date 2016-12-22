@@ -5,6 +5,7 @@
 		var defaults = {
 			'tagKeys': ['space', 'comma', 'enter'],
 			'emailSeperator' : ',',
+			'defaultText' : null,
 			'defaultEmails' : null,
 			'validEmailTest' : null
 		};
@@ -36,6 +37,9 @@
 			var containerDiv = $('<div>').addClass('tagInput-container');
 			var inputElementContainer = $('<div>').addClass('tagInput-input-container');
 			var inputElement = $('<input>').addClass('tagInput-input');
+			if(settings.defaultText){
+				inputElement.attr('placeholder', settings.defaultText);
+			}
 			$(inputElementContainer).append(inputElement);
 			$(containerDiv).append(inputElementContainer);
 			$(elem).after(containerDiv);

@@ -52,20 +52,8 @@
 		$(".inputEmail").tagInput({
 			'tagKeys' : ['space', 'comma', 'enter', 'semicolon'],
 			'emailSeperator' : '   || ',
+			'defaultText' : 'Please enter a email id',
 			'defaultEmails' : ['myname@gmail.com' , 'name2@test.com']
-		});
-		
-		$(element / s).tagInput({
-			'tagKeys': ['space', 'comma', 'enter', 'semicolon'],
-			'emailSeperator': ',',
-			'defaultEmails': [],
-			'validEmailTest': function(email) {
-				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-					return ('valid');
-				} else {
-					return ('invalid');
-				}
-			}
 		});
 		
 	</script>

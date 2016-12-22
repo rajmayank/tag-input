@@ -10,13 +10,16 @@ Simple yet effective email id tag generator.  It creates gmail like tags inputs 
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | tagKeys        | ['space', 'comma', 'enter', 'semicolon']                                                                                                                         | Keys that would trigger test on the email yet entered and add it if valid         |
 | emailSeperator | ','                                                                                                                                                              | Seperator between emaails. Inserted as - 'email1 email2'                          |
+| defaultText    | ' '                                                                                                                                                              | Default text to be displayed when entering a new email                            |
 | defaultEmails  | [ ]                                                                                                                                                              | Array of default emails                                                           |
 | validEmailTest | function(email) { if ( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail) ) {         return ('valid');     } else {         return ('invalid');     } } | Custom bolean function that receives email as parameter and returns valid/invalid |
 
 
-    		$(element / s).tagInput({
+
+    	$(element / s).tagInput({
 			'tagKeys': ['space', 'comma', 'enter', 'semicolon'],
 			'emailSeperator': ',',
+			'defaultText' : '',
 			'defaultEmails': [],
 			'validEmailTest': function(email) {
 				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
@@ -36,5 +39,6 @@ Simple yet effective email id tag generator.  It creates gmail like tags inputs 
 
  - Edit a already entered email
  - Arrange emails
+ - Autocomplete
 
 
