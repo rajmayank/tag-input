@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
@@ -15,17 +14,26 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          'dist/css/tagInput.min.css' : [ 'src/tagInput.css' ]
+          'dist/css/tagInput.min.css': ['src/tagInput.css']
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: ['src/tagInput.css' , 'src/tagInput.js'],
+        tasks: ['uglify', 'cssmin'],
+        options: {
+          spawn: false,
+        },
+      },
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify' , 'cssmin']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('default', ['uglify', 'cssmin']);
 
 };

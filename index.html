@@ -32,13 +32,13 @@
 			<div class="col-md-4 well well-lg">
 				<div class="form-group">
 					<label>Email</label>
-					<input type="email" class="form-control inputEmail" placeholder="Email">
+					<input type="email" class="form-control inputEmail" placeholder="Email" value="mayank@gmail.com">
 				</div>
 			</div>
 			<div class="col-md-8 well well-lg">
 				<div class="form-group">
 					<label>Email</label>
-					<input type="email" class="form-control inputEmail" placeholder="Email">
+					<input type="email" class="form-control inputEmail" placeholder="Email" value="mayank@gmail.com,test@gmail.com , test2@gmail.com">
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,25 @@
 	<script src="dist/js/bootstrap.min.js"></script>
 	<script src="dist/js/tagInput.min.js"></script>
 	<script type="text/javascript">
-		$(".inputEmail").tagInput();
+		$(".inputEmail").tagInput({
+			'tagKeys' : ['space', 'comma', 'enter', 'semicolon'],
+			'emailSeperator' : '   || ',
+			'defaultEmails' : ['myname@gmail.com' , 'name2@test.com']
+		});
+		
+		$(element / s).tagInput({
+			'tagKeys': ['space', 'comma', 'enter', 'semicolon'],
+			'emailSeperator': ',',
+			'defaultEmails': [],
+			'validEmailTest': function(email) {
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+					return ('valid');
+				} else {
+					return ('invalid');
+				}
+			}
+		});
+		
 	</script>
 </body>
 </html>
