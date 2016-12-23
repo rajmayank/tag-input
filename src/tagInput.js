@@ -279,7 +279,7 @@
 					clip_currentCopyFlag = true;
 					$(containerDiv).find('.copy-state').removeClass('copy-state');
 					$(this).addClass('copy-state');
-					$(clipboardElement).val($(this).text());
+					$(clipboardElement).val($(this).find('span').text());
 				});
 			})();
 
