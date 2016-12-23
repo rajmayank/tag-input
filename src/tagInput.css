@@ -16,6 +16,12 @@
     padding: 2px 10px 2px;
     border-radius: 4px;
 }
+.tagInput-container .tagInput-tag.copy-state{
+	border: 1px solid #1a9ab0;
+}
+.tagInput-container .tagInput-tag.copy-state:hover{
+	border: 1px solid #1a9ab0;
+}
 .tagInput-container .tagInput-tag:hover{
 	cursor: pointer;
 	border:1px solid #7a7a7a;

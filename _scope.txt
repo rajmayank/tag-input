@@ -1,0 +1,32 @@
+
+- User can enter multiple emails separated by commas or spaces or semicolon
+
+- As the user types/ pastes a valid email followed by a comma or space or semincolon convert it to a tag.
+
+- Add a space and move cursor to the right so that the user can type another email.
+
+- Each tag should have a cross to remove the entered email. One can also remove an entire email tag by hitting Backspace.
+
+- if it's invalid and user enters a comma then highlight the tag in red text
+
+- If the user pastes an email address, trim leading and trailing spaces in the email.
+
+- If the user pastes multiple email addresses in either of these formats it should convert to individual tags: 
+-String 1: Abhishek Barua <abhishek.barua@cactusglobal.com>; Abhitesh Das <abhiteshd@cactusglobal.com>; Allan Mascarenhas <allanm@cactusglobal.com>; Amit Bhatia <amit.bhatia@cactusglobal.com>; Aneesha Jaisheel <aneeshaj@cactusglobal.com>; Dhanashri Adsul <dhanashria@cactusglobal.com>; Hetal Negi <hetal.negi@cactusglobal.com>;
+- String 2: abhishek.barua@cactusglobal.com; abhiteshd@cactusglobal.com; allanm@cactusglobal.com; 
+
+
+If the user double clicks into an email tag, then convert it to text so that it can be edited. When converted to text, don't include comma.
+
+- Since tags take up additional space, when the user focuses out of the CC or BCC field the emails can be converted to text with comma separators 
+- Example: john.doe@mailinator.com, jane.doe@mailinator.com
+
+- If user focuses back into the Cc or Bcc field, then convert emails to tags 
+
+ If user clicks on to an email tag, apply selected class so that user can copy past (Ctl + C)
+X> If user clicks on to an email tag, apply selected class so that user can copy past (right click copy)
+
+If focus is in the field and user clicks on Ctrl + A then all emails can be selected
+
+When pasting multiple emails they should in the standard text format
+Example: john.doe@mailinator.com, jane.doe@mailinator.com

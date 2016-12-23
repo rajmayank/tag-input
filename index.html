@@ -32,13 +32,14 @@
 			<div class="col-md-4 well well-lg">
 				<div class="form-group">
 					<label>Email</label>
-					<input type="email" class="form-control inputEmail" placeholder="Email" value="mayank@gmail.com">
+					<input type="email" class="form-control inputEmail" placeholder="Email">
 				</div>
 			</div>
 			<div class="col-md-8 well well-lg">
+				<p> Shows emaial on focus out </p>
 				<div class="form-group">
 					<label>Email</label>
-					<input type="email" class="form-control inputEmail" placeholder="Email" value="mayank@gmail.com,test@gmail.com , test2@gmail.com">
+					<input type="email" class="form-control inputEmail_focusOut" placeholder="Email">
 				</div>
 			</div>
 		</div>
@@ -51,9 +52,23 @@
 	<script type="text/javascript">
 		$(".inputEmail").tagInput({
 			'tagKeys' : ['space', 'comma', 'enter', 'semicolon'],
-			'emailSeperator' : '   || ',
+			'emailSeperator' : ';',
 			'defaultText' : 'Please enter a email id',
-			'defaultEmails' : ['myname@gmail.com' , 'name2@test.com']
+			'defaultEmails' : ['defaultemail@one.com' , 'defaultemail@two.com'],
+			'allowMultipleEntry' : true,
+			'multipleEntrySeperator' : ';',
+			'nameAndEmailFormat' : true,
+			// 'showEmailonFocusLost' : true,
+		});
+		$(".inputEmail_focusOut").tagInput({
+			'tagKeys' : ['space', 'comma', 'enter', 'semicolon'],
+			'emailSeperator' : ';',
+			'defaultText' : 'Please enter a email id',
+			'defaultEmails' : ['defaultemail@one.com' , 'defaultemail@two.com'],
+			'allowMultipleEntry' : true,
+			'multipleEntrySeperator' : ';',
+			'nameAndEmailFormat' : true,
+			'showEmailonFocusLost' : true,
 		});
 		
 	</script>
